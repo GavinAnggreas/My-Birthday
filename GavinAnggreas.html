@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is It Gavin Anggreas's birthday?</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #0400ff, #003dff, #0059ff, #0070ff, #0084ff, #008fff, #0099ff, #00a3ff, #00a8ff, #00acff, #00b1ff, #00b5ff);
+            animation-name: navigasi;
+            animation-duration: 15s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            background-size: 400% 400%;
+        }
+        h1{
+            font-family: 'Pacifico', cursive;
+            /* margin-top: vw; */
+            text-align: center;
+            font-size: 100pt;
+            color: lime;
+        }
+        div.ayam{
+            position: relative;
+            left: 23.5vw;
+            top: 9vw;
+            width: 50vw;
+            height: 30vw;
+            border: 2px solid white;
+            border-radius: 15px 50px;
+            box-shadow: 0 0 2rem white;
+        }
+        p{
+            font-family: 'Dancing Script', cursive;
+            display: block;
+            font-size:4.5vw;
+            text-shadow: 2px 2px black;
+            color: white;
+            text-align: center;
+            /* font-weight: bold; */
+        }
+        @keyframes navigasi{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="ayam">
+    <p>Is it Gavin's Birthday yet?</p>
+    <h1></h1>
+    </div>
+    
+</body>
+<script>
+    let date = new Date();
+    let h1 = document.querySelector("h1");
+    let msg;
+    (date.getDate() === 3 && date.getMonth() === 0) ? msg = "YES IT IS" : msg = "No, not yet";
+    h1.innerHTML = msg;
+    
+</script>
+</html>
