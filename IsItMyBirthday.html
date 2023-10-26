@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>
+        function updateCountdown() {
+
+            // set tanggal disini (kalo butuh kedepanny)
+
+            const targetDate = new Date('2024-01-03T00:00:00');
+
+            const currentDate = new Date();
+
+            const timeDifference = targetDate - currentDate;
+
+            const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30.44));
+            const days = Math.floor((timeDifference / (1000 * 60 * 60 * 24)) % 30.44);
+            const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
+
+            document.getElementById('months').innerHTML = months;
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+    </script>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is It Gavin Anggreas's birthday?</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #0400ff, #003dff, #0059ff, #0070ff, #0084ff, #008fff, #0099ff, #00a3ff, #00a8ff, #00acff, #00b1ff, #00b5ff);
+            animation-name: navigasi;
+            animation-duration: 15s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            background-size: 400% 400%;
+        }
+        h2{
+            font-family: 'Pacifico', cursive;
+            /* margin-top: vw; */
+            text-align: center;
+            font-size: 100pt;
+            color: lime;
+        }
+        div.ayam{
+            position: relative;
+            left: 23.5vw;
+            top: 3vw;
+            width: 50vw;
+            height: 30vw;
+            border: 2px solid white;
+            border-radius: 15px 50px;
+            box-shadow: 0 0 2rem white;
+        }
+        p{
+            font-family: 'Dancing Script', cursive;
+            display: block;
+            font-size:4.5vw;
+            text-shadow: 2px 2px black;
+            color: white;
+            text-align: center;
+            /* font-weight: bold; */
+        }
+        div.countdown p{
+            font-size: 3vw;
+        }
+        @keyframes navigasi{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="ayam">
+    <p>Is it Gavin's Birthday yet?</p>
+    <h2></h2>
+    <div class="countdown">
+    <p>Countdown to January 3, 2024:</p>
+    <p>
+        <span id="months">0</span> months,
+        <span id="days">0</span> days, and
+        <span id="hours">0</span> hours
+    </p>
+    </div>
+</div>
+    
+</body>
+<script>
+    let date = new Date();
+    let h2 = document.querySelector("h2");
+    let msg;
+    (date.getDate() === 3 && date.getMonth() === 0) ? msg = "YES IT IS" : msg = "No, not yet";
+    h2.innerHTML = msg;
+    
+
+</script>
+</html>
